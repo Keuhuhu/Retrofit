@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/tvStatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Memuat data..."
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <!-- Tombol dari spesifikasi: muncul hanya saat terjadi error -->
+    <Button
+        android:id="@+id/btnCobaLagi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Coba Lagi"
+        android:visibility="gone" />
+
+    <!-- Pemicu fitur POST (modul) dan DELETE (Soal 4) -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnKirim"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Kirim Postingan" />
+
+        <Button
+            android:id="@+id/btnHapus"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Hapus Postingan" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/listUser"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="12dp" />
+
+</LinearLayout>
